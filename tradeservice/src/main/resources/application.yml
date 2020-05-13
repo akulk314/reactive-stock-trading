@@ -1,0 +1,28 @@
+quoteservice:
+  scheme: http
+  host: localhost
+  port: 9003
+  path: quote
+
+quotefeedservice:
+  scheme: http
+  host: localhost
+  port: 9003
+  path: quotes
+
+
+orderservice:
+  scheme: http
+  host: localhost
+  port: 9000
+  path: order
+
+orderfeedservice:
+  scheme: http
+  host: localhost
+  port: 9000
+  path: orders
+
+tradeservice:
+  order:
+    batchsize: 3
