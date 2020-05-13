@@ -1,6 +1,7 @@
 # Reactive Stock Trading App
 
 This app performs stock trades and is built using Spring's Reactor project. It is loosely based on Spring's reactive stock trading app sample project.
+Also uses Lombok to reduce boilerplate.
 
 ## Project Structure 
 
@@ -8,9 +9,11 @@ The app is made up of 3 microservices and a common libraries module. The folder 
 
 - common: Model classes shared by the microservices.
 
-- orderservice: Allows users to place orders consisting of a ticker, a minPrice and a maxPrice.
+- orderservice: Microservice exposing a REST API to perform CRUD operations on orders 
+                      consisting (primarily) of a ticker, a minPrice and a maxPrice.
 
-- quoteservice: Generate quotes containing a ticker and a price
+- quoteservice: Microservice exposing a REST API to perform a GET/DELETE on quotes
+                       consisting (primarily) of a ticker and a price.
 
 - tradeservice: Periodically fetch OPEN orders, and search for a quote whose price is in the 
                            order's price range. Fill the order if one is found, otherwise move it to the end 
